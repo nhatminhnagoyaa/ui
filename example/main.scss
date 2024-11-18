@@ -1,0 +1,64 @@
+.step-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; // Giúp xử lý các thành phần chồng lên nhau
+}
+
+.step {
+  color: #000; // Màu chữ
+  font-weight: bold;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  flex: 1; // Chia đều các ô
+  // border-right: 2px solid #fff; // Đường phân cách giữa các bước
+
+  // Mũi tên bên trái
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: -15px; // Đặt mũi tên bên trái
+    transform: translateY(-50%);
+    border-top: 23px solid transparent;
+    border-bottom: 23px solid transparent;
+    border-left: 15px solid #a7d0c4;
+    z-index: 23333; // Mũi tên sẽ ở trên các ô
+  }
+
+  // Màu nền và mũi tên từng ô
+  &:nth-child(1) {
+    background-color: #a7d0c4; // Màu xanh nhạt
+
+    &:before {
+      border-right-color: #a7d0c4; // Màu mũi tên giống ô
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: #88bfb2; // Màu xanh trung bình
+
+    &:before {
+      border-right-color: #88bfb2; // Màu mũi tên giống ô
+    }
+  }
+
+  &:nth-child(3) {
+    background-color: #6aa89e; // Màu xanh đậm hơn
+
+    &:before {
+      border-right-color: #6aa89e; // Màu mũi tên giống ô
+    }
+  }
+
+  &.last {
+    background-color: #4c8f87; // Màu xanh đậm nhất
+    border-right: none; // Không cần đường phân cách
+
+    &:before {
+      content: none; // Bỏ mũi tên
+    }
+  }
+}
