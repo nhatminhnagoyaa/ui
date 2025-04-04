@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple menu example with HTML and CSS.">
+    <meta name="keywords" content="HTML, CSS, Menu, Example">
+    <meta name="author" content="Your Name">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="./assets/apple-touch-icon.png">
+
+    <title>Contact</title>
+
+
+    <link rel="stylesheet" href="./assets/css/destyle.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="menu__wrapper">
+        <div class="menu__bar">
+            <a href="index.html" title="Logo" class="logo">
+                <svg width="1103" height="996" viewBox="0 0 1103 996" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                        fill="#FAFBFC" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                        fill="#FAFBFC" />
+                </svg>
+
+            </a>
+            <img class="menu-icon" src="assets/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                onclick="toggleMenu(this)">
+            <ul class="navigation">
+                <li>
+                    <a href="#platform" title="platform">
+                        Platform
+                    </a>
+                </li>
+                <li>
+                    <a href="#services" title="Services">
+                        Services
+                    </a>
+                </li>
+                <li>
+                    <a href="#blog" title="Blog">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <a href="#about" title="About">
+                        About
+                    </a>
+                </li>
+                <li>
+                    <a href="./contact.html" title="Contact Us">
+                        Contact Us
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+
+    <!-- Main -->
+    <main id="overflow">
+
+        <h1 class="form-title">登録フォーム</h2>
+            <form action="register.php" method="POST" id="registrationForm">
+
+                <!-- 姓と名 -->
+                <label for="name">お名前 <span class="required">必須</span></label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <label for="last_name">姓</label>
+                        <input type="text" id="last_name" name="last_name" required placeholder="例: 田中">
+                    </div>
+                    <div class="name-field">
+                        <label for="first_name">名</label>
+                        <input type="text" id="first_name" name="first_name" required placeholder="例: 太郎">
+                    </div>
+                </div>
+
+                <!-- フリガナ -->
+                <label for="furigana">フリガナ <span class="required">必須</span></label>
+                <div class="name-group">
+                    <div class="name-field">
+                        <label for="last_name_furigana">姓</label>
+                        <input type="text" id="last_name_furigana" name="last_name_furigana" required
+                            placeholder="例: タナカ">
+                    </div>
+                    <div class="name-field">
+                        <label for="first_name_furigana">名</label>
+                        <input type="text" id="first_name_furigana" name="first_name_furigana" required
+                            placeholder="例: タロウ">
+                    </div>
+                </div>
+
+                <!-- 生年月日 -->
+                <label for="birth_year">生年月日 <span class="required">必須</span></label>
+
+                <div class="birthdate-container">
+                    <div class="input-group">
+                        <input type="number" id="birth_year" name="birth_year" placeholder="1990" min="1900" max="2025"
+                            required>
+                        <span>年</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="birth_month" name="birth_month" placeholder="--" min="1" max="12"
+                            required>
+                        <span>月</span>
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="birth_day" name="birth_day" placeholder="--" min="1" max="31" required>
+                        <span>日</span>
+                    </div>
+                </div>
+
+                <!-- 所属機関 -->
+                <label for="organization">所属機関<span class="required">必須</span></label>
+                <input type="text" id="organization" name="organization" required>
+
+                <!-- 所属機関 -->
+                <label for="departments">所属部局／部署等<span class="option">任意</span></label>
+                <input type="text" id="departments" name="departments" required>
+
+                <!-- 所属機関 -->
+                <label for="position">役職<span class="option">任意</span></label>
+                <input type="text" id="position" name="position" required>
+
+                <!-- 電話番号 -->
+                <label for="phone">電話番号<span class="required">必須</span></label>
+                <input type="tel" id="phone" name="phone" pattern="\d{10,11}" required>
+
+                <!-- 住所 -->
+                <label for="address">住所 <span class="required">必須</span></label>
+
+                <div class="name-group">
+                    <!-- 郵便番号 -->
+                    <input type="text" id="zipcode" name="zipcode" required placeholder="例: 123-4567"
+                        oninput="fetchPrefecture()">
+                    <!-- 当道府県 -->
+                    <input type="text" id="prefecture" name="prefecture" required placeholder="都道府県" readonly>
+                </div>
+
+                <label for="city">市区町村</label>
+                <input type="text" id="city" name="city" readonly placeholder="市区町村">
+
+                <label for="address">番地</label>
+                <input type="text" id="address" name="address" required placeholder="番地">
+
+                <label for="building">建物名・部屋番号</label>
+                <input type="text" id="building" name="building" required placeholder="建物名・部屋番号">
+
+                <!-- FAX番号 -->
+                <label for="fax">FAX番号<span class="option">(任意)</span></label>
+                <input type="number" id="fax" name="fax" placeholder="例: 03-1234-5678">
+
+                <!-- メールアドレス -->
+                <label for="email">メールアドレス <span class="required">必須</span></label>
+                <input type="email" id="email" name="email" placeholder="info@example.com" required>
+                <span id="email-error" class="error-message" style="display:none;">メールアドレスを入力してください。</span>
+
+                <!-- 確認メール -->
+                <label for="email-confirm">確認メール <span class="required">必須</span></label>
+                <input type="email" id="email-confirm" name="email-confirm" placeholder="info@example.com" required>
+                <span id="email-error" class="error-message" style="display:none;">メールアドレスを入力してください。</span>
+
+
+                <!-- プライバシーポリシー -->
+                <div class="privacy-policy-group">
+                    <label for="privacy_policy" class="custom-checkbox">
+                        <input type="checkbox" id="privacy_policy" name="privacy_policy" required>
+                        <span class="checkbox-icon"></span>
+                        <span class="checkbox-text">同意する</span>
+                        <span class="required">必須</span>
+                    </label>
+                    <a href="privacy-policy.html" target="_blank">プライバシーポリシー</a> をご確認ください。
+                </div>
+
+                <!-- Nút Đăng ký -->
+                <button type="submit">登録</button>
+
+                <!-- Thông báo lỗi -->
+                <div id="errorMessages" class="error" style="display:none;"></div>
+            </form>
+    </main>
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-wrapper">
+
+            <section class="footer-top">
+                <div class="footer-headline">
+                    <h2>Subscribe to our newsletter</h2>
+                    <p>
+                        Stay up to date with our news and articles
+                    </p>
+                </div>
+                <div class="footer-subscribe">
+                    <input type="email" spellcheck="false" placeholder="Your Email">
+                    <button>
+                        Sign Up
+                    </button>
+                </div>
+            </section>
+
+            <div class="footer-columns">
+                <section class="footer-logo">
+                    <h2>
+                        <svg width="1103" height="996" viewBox="0 0 1103 996" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                                fill="#F4F5F6" />
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M410.988 255.56L0 995.337H189.802L505.141 427.427L410.988 255.56ZM1102.94 995.337L647.119 170.373L551.471 0L457.317 170.373L551.471 340.746L711.79 629.718H498.683L405.461 786.972H799.034L914.634 995.337H1102.94Z"
+                                fill="#F4F5F6" />
+                        </svg>
+                    </h2>
+                </section>
+                <section>
+                    <h3>Product</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="API">API</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Pricing">Pricing</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Documentation">Documentation</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Release Notes">Release Notes</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Status">Status</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Resources</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="Support">Support</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Sitemap">Sitemap</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Newsletter">Newsletter</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Help Centre">Help Centre</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Investor">Investor</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Company</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="About Us">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Blog">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Careers">Careers</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Press">Press</a>
+                        </li>
+                        <li>
+                            <a href="#" title="Contact">Contact</a>
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Legal</h3>
+                    <ul>
+                        <li>
+                            <a href="#" title="Terms and services">
+                                Terms
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Privacy Policy">
+                                Privacy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cookies">
+                                Cookies
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Licenses">
+                                Licenses
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Cookies">
+                                Contact
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="footer-bottom">
+                <div class='social-links'>
+                    <ul>
+                        <li>
+                            <a href="#" title="Instagram">
+                                <img src="assets/instagram.svg" alt='Instagram'>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Linkedin">
+                                <img src="assets/linkedin.svg" alt='Linkedin'>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Twitter">
+                                <img src="assets/twitter.svg" alt='Twitter'>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="Youtube">
+                                <img src="assets/youtube.svg" alt='YouTube'>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" title="GitHub">
+                                <img src="assets/github.svg" alt='GitHub'>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <small>© Atheros Intelligence Ltd. <span id="year"></span>, All rights reserved</small>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./assets/dist/purify.min.js"></script>
+    <script src="./assets/js/script.js"></script>
+</body>
+
+</html>

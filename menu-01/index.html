@@ -1,43 +1,37 @@
-
-
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Menu Example</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="menu__wrapper">
-            <div class="menu__bar">
-                <a
-                    href="#"
-                    title="Logo"
-                >
-                    <img
-                        class="logo"
-                        src="assets/atheros_learning_logo.png"
-                        title='Logo'
-                        alt='Logo'
-                    >
-                </a>
-                <img
-                    class="menu-icon"
-                    src="assets/burger-menu.svg"
-                    title='Burger Menu'
-                    alt='Burger Menu'
-                    onclick="toggleMenu(this)"
-                >
-                <ul class="navigation">
-                    <li>Platform</li>
-                    <li>Blog</li>
-                    <li>About</li>
-                    <li>Contact Us</li>
-                </ul>
-            </div>
-        </div>
-        <script src="script.js"></script>
-    </body>
-</html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="menu__wrapper">
 
+        <div class="menu__bar">
+            <a href="index.html" title="Logo">
+                <img class="logo" src="assets/atheros_learning_logo.png" title='Logo' alt='Logo'>
+            </a>
+
+            <img class="menu-icon" src="assets/burger-menu.svg" title='Burger Menu' alt='Burger Menu'
+                onclick="toggleMenu(this)">
+
+            <ul class="navigation">
+                <li><a href="#">Platform</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+
+
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
